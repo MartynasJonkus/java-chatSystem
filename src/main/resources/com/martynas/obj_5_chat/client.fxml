@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d6e1e8" height="101.0" layoutY="298.0" stroke="TRANSPARENT" strokeType="INSIDE" width="145.0" />
+      <Label layoutX="28.0" layoutY="313.0" prefHeight="35.0" prefWidth="117.0" text="un chat">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="353.0" prefHeight="17.0" prefWidth="117.0" text="Connected as:" />
+      <Label fx:id="receiverLabel" alignment="CENTER" layoutX="286.0" layoutY="22.0" prefHeight="27.0" prefWidth="458.0" text="[Group] General">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPaneMain" fitToHeight="true" fitToWidth="true" layoutX="286.0" layoutY="56.0" prefHeight="299.0" prefWidth="458.0">
+         <content>
+            <VBox fx:id="vboxMessages" prefHeight="408.0" prefWidth="443.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="messageField" layoutX="286.0" layoutY="361.0" onKeyPressed="#sendMessage" prefHeight="25.0" prefWidth="458.0" promptText="Type your message here..." />
+      <ScrollPane fx:id="scrollPaneGroups" fitToHeight="true" fitToWidth="true" layoutX="157.0" layoutY="56.0" prefHeight="222.0" prefWidth="117.0">
+         <content>
+            <VBox fx:id="vboxGroups" prefHeight="220.0" prefWidth="115.0" />
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="22.0" prefHeight="27.0" prefWidth="117.0" text="Rooms">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="roomNameField" layoutX="157.0" layoutY="299.0" prefHeight="25.0" prefWidth="117.0" promptText="New room name" />
+      <Button layoutX="157.0" layoutY="330.0" mnemonicParsing="false" onAction="#createRoom" prefHeight="25.0" prefWidth="117.0" text="Create room" />
+      <Button layoutX="157.0" layoutY="361.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="117.0" text="Exit" />
+      <Label alignment="CENTER" layoutX="28.0" layoutY="22.0" prefHeight="27.0" prefWidth="117.0" text="Users">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPaneUsers" fitToHeight="true" fitToWidth="true" layoutX="28.0" layoutY="56.0" prefHeight="222.0" prefWidth="117.0">
+         <content>
+            <VBox fx:id="vboxUsers" prefHeight="200.0" prefWidth="100.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="nameLabel" layoutX="28.0" layoutY="370.0" prefHeight="17.0" prefWidth="117.0" text="???" />
+   </children>
+</AnchorPane>
